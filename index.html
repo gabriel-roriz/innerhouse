@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="public/css/bootstrap-grid.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="public/css/libs/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="public/css/libs/bootstrap-grid.css">
   <link rel="stylesheet" type="text/css" href="public/css/style.css">
-  <link rel="stylesheet" type="text/css" href="public/css/bootstrap-select.css">
+  <link rel="stylesheet" type="text/css" href="public/css/modal.css">
 
-  <script src="public/js/jquery-3.2.1.min.js"></script>
-  <script src="public/js/bootstrap.js"></script>
-  <script src="public/js/bootstrap-select.js"></script>
+  <link rel="import" href="public/includes/modal.html">
 
+  <script src="public/js/libs/jquery-3.2.1.min.js"></script>
+  <script src="public/js/libs/bootstrap.js"></script>
+
+  <script src="public/js/modal.js"></script>
   <script src="public/js/data.js"></script>
   <script src="public/js/controller.js"></script>
+  <script src="public/js/templates.js"></script>
 
 
   <title>InnerHouse</title>
@@ -21,54 +25,15 @@
 
 
 <body>
-  <div id="opacity" onclick="closeModal()"></div>
-  <div id="modal">
-    <div class="row">
-      <div class="col"><img id="image-modal"></div>
-      <div class="col">
-        <span id="title-modal">Casa do Gabriel</span><span id="tamanho-modal"></span>
-        <br>
-        <p id="adress-modal"> Rua Antônio Simão Mauad - São Paulo - SP</p>
-
-        <span id="topics">Serviços próximos:</span>
-        <div class="row">
-          <div class="col-1"><img src=icones/icone-restaurante.png></div>
-          <div class="col-1"></div>
-          <div class="col-1"><img src=icones/icone-padaria.png></div>
-          <div class="col-1">2</div>
-          <div class="col-1"><img src=icones/icone-mercado.png></div>
-          <div class="col-1">2</div>
-          <div class="col-1"><img src=icones/icone-hospital.png></div>
-          <div class="col-1">2</div>
-          <div class="col-1"><img src=icones/icone-escola.png ></div>
-          <div class="col-1">2</div>
-        </div>
-        <br>
-        <span id="topics">Aeroportos e rodoviárias:</span>
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-1"></div>
-          <div class="col-1"><img src=icones/icone-aviao.png></div>
-          <div class="col-3">3.0 km</div>
-          <div class="col-1"><img src=icones/icone-onibus.png></div>
-          <div class="col-3">2.0 km</div>
-          <div class="col-1"></div>
-          <div class="col-1"></div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-12" id="topics">Grau de silêncio:</div>
-          <div class="col-12" id="silecio"><img src=stars/2.png> </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <nav class="nav">
-    <a href="javascript:window.location.reload();" class="brand"><img src="public/img/logo.png"></a>
+    <a href="javascript:window.location.reload();" class="brand">
+       <img src="public/img/logo.png">
+     </a>
   </nav>
 
   <div class="clearfix">
+    <div id="place_holder"></div>
     <div id="div1">
       <form class="search-form">
         <label for="form-name">Nome:<input id="form-name" type="text"></label>
